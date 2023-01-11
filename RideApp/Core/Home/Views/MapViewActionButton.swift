@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct MapViewActionButton: View {
+    
+    @Binding var showLocationSearchView: Bool
+    
     var body: some View{
         Button {
+            withAnimation(.spring()){
+                showLocationSearchView.toggle()
+            }
             
         } label:{
             Image(systemName: "line.3.horizontal")
@@ -26,6 +32,7 @@ struct MapViewActionButton: View {
 
 struct MapViewActionButton_Preview: PreviewProvider{
     static var previews: some View{
-        MapViewActionButton()
+        MapViewActionButton(showLocationSearchView:
+                .constant(true))
     }
 }
