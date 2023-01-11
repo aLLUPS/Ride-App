@@ -12,6 +12,7 @@
 		465E845D296EFC00004530D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465E845C296EFC00004530D5 /* Preview Assets.xcassets */; };
 		465E846B296EFE11004530D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E846A296EFE11004530D5 /* HomeView.swift */; };
 		465E846D296F02E1004530D5 /* RideMap_representable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E846C296F02E1004530D5 /* RideMap_representable.swift */; };
+		465E846F296F090B004530D5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E846E296F090B004530D5 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		465E845C296EFC00004530D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		465E846A296EFE11004530D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		465E846C296F02E1004530D5 /* RideMap_representable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideMap_representable.swift; sourceTree = "<group>"; };
+		465E846E296F090B004530D5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		465E8466296EFD95004530D5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				465E846E296F090B004530D5 /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465E846F296F090B004530D5 /* LocationManager.swift in Sources */,
 				465E846B296EFE11004530D5 /* HomeView.swift in Sources */,
 				465E846D296F02E1004530D5 /* RideMap_representable.swift in Sources */,
 				465E8456296EFBFF004530D5 /* RideAppApp.swift in Sources */,
@@ -329,6 +333,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RideApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location to find nearby rides and locations";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,6 +362,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RideApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location to find nearby rides and locations";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
