@@ -1,5 +1,5 @@
 //
-//  LocationServiceViewModel.swift
+//  LocationSearchViewModel.swift
 //  RideApp
 //
 //  Created by Pawara Siriwardhane on 2023-01-12.
@@ -12,7 +12,8 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     // MARK: - Properties
     
     @Published var results = [MKLocalSearchCompletion()]
-    @Published var selectedLocation: String?    // initialized as a nullable string
+    // @Published var selectedLocation: String?    // initialized as a nullable string
+    @Published var selectedLocationCoordinate: CLLocationCoordinate2D?
     
     private let searchCompleter = MKLocalSearchCompleter()
     
@@ -41,6 +42,7 @@ class LocationSearchViewModel: NSObject, ObservableObject {
             }
             guard let item = response?.mapItems.first else { return }
             let coordinate = item.placemark.coordinate
+            self.selectedLocationCoordinate = coordinate
             
             print("DEBUG: Location coordinate \(coordinate)")
         }

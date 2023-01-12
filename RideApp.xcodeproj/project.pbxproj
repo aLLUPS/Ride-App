@@ -17,7 +17,7 @@
 		465E8477296F4815004530D5 /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E8476296F4815004530D5 /* MapViewActionButton.swift */; };
 		465E8479296F4A24004530D5 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E8478296F4A24004530D5 /* LocationSearchView.swift */; };
 		465E847B296F4ECB004530D5 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E847A296F4ECB004530D5 /* LocationSearchResultCell.swift */; };
-		465E847D296FC854004530D5 /* LocationServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E847C296FC854004530D5 /* LocationServiceViewModel.swift */; };
+		465E847D296FC854004530D5 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E847C296FC854004530D5 /* LocationSearchViewModel.swift */; };
 		465E847F29700227004530D5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 465E847E29700227004530D5 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,7 @@
 		465E8476296F4815004530D5 /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
 		465E8478296F4A24004530D5 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		465E847A296F4ECB004530D5 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
-		465E847C296FC854004530D5 /* LocationServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceViewModel.swift; sourceTree = "<group>"; };
+		465E847C296FC854004530D5 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		465E847E29700227004530D5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,7 +164,7 @@
 		465E8472296F42E0004530D5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				465E847C296FC854004530D5 /* LocationServiceViewModel.swift */,
+				465E847C296FC854004530D5 /* LocationSearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 				465E846B296EFE11004530D5 /* HomeView.swift in Sources */,
 				465E846D296F02E1004530D5 /* RideMap_representable.swift in Sources */,
 				465E847F29700227004530D5 /* README.md in Sources */,
-				465E847D296FC854004530D5 /* LocationServiceViewModel.swift in Sources */,
+				465E847D296FC854004530D5 /* LocationSearchViewModel.swift in Sources */,
 				465E8456296EFBFF004530D5 /* RideAppApp.swift in Sources */,
 				465E8475296F43E1004530D5 /* LocationSearchActivationView.swift in Sources */,
 				465E847B296F4ECB004530D5 /* LocationSearchResultCell.swift in Sources */,
