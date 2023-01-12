@@ -74,15 +74,15 @@ struct RideRequestView: View {
             
             ScrollView(.horizontal){
                 HStack(spacing: 12) {
-                    ForEach(0 ..< 3, id: \.self) { _ in
+                    ForEach(RideType.allCases) { ridetype in
                         
                         VStack(alignment: .leading) {
-                            Image("BlackCar")
+                            Image(ridetype.imageName)
                                 .resizable()
                                 .scaledToFit()
                             
                             VStack(spacing: 4) {
-                                Text("Taxi")
+                                Text(ridetype.description)
                                     .font(.system(size: 14, weight: .semibold))
                                 Text("$19.99")
                                     .font(.system(size: 14, weight: .semibold))
