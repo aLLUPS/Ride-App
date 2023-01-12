@@ -19,6 +19,7 @@
 		465E847B296F4ECB004530D5 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E847A296F4ECB004530D5 /* LocationSearchResultCell.swift */; };
 		465E847D296FC854004530D5 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E847C296FC854004530D5 /* LocationSearchViewModel.swift */; };
 		465E847F29700227004530D5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 465E847E29700227004530D5 /* README.md */; };
+		465E848129704BA3004530D5 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E848029704BA3004530D5 /* MapViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		465E847A296F4ECB004530D5 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
 		465E847C296FC854004530D5 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		465E847E29700227004530D5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		465E848029704BA3004530D5 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		465E8467296EFD9D004530D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				465E848029704BA3004530D5 /* MapViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				465E8477296F4815004530D5 /* MapViewActionButton.swift in Sources */,
 				465E846B296EFE11004530D5 /* HomeView.swift in Sources */,
 				465E846D296F02E1004530D5 /* RideMap_representable.swift in Sources */,
+				465E848129704BA3004530D5 /* MapViewState.swift in Sources */,
 				465E847F29700227004530D5 /* README.md in Sources */,
 				465E847D296FC854004530D5 /* LocationSearchViewModel.swift in Sources */,
 				465E8456296EFBFF004530D5 /* RideAppApp.swift in Sources */,
