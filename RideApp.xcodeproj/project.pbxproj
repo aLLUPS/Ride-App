@@ -20,6 +20,7 @@
 		465E847D296FC854004530D5 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E847C296FC854004530D5 /* LocationSearchViewModel.swift */; };
 		465E847F29700227004530D5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 465E847E29700227004530D5 /* README.md */; };
 		465E848129704BA3004530D5 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E848029704BA3004530D5 /* MapViewState.swift */; };
+		465E84842970578D004530D5 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E84832970578D004530D5 /* RideRequestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		465E847C296FC854004530D5 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		465E847E29700227004530D5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		465E848029704BA3004530D5 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
+		465E84832970578D004530D5 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		465E8464296EFD7F004530D5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				465E848229705768004530D5 /* Trips */,
 				465E8470296F427E004530D5 /* LocationSearch */,
 				465E8469296EFDF7004530D5 /* Home */,
 			);
@@ -182,6 +185,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		465E848229705768004530D5 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				465E84832970578D004530D5 /* RideRequestView.swift */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +271,7 @@
 				465E848129704BA3004530D5 /* MapViewState.swift in Sources */,
 				465E847F29700227004530D5 /* README.md in Sources */,
 				465E847D296FC854004530D5 /* LocationSearchViewModel.swift in Sources */,
+				465E84842970578D004530D5 /* RideRequestView.swift in Sources */,
 				465E8456296EFBFF004530D5 /* RideAppApp.swift in Sources */,
 				465E8475296F43E1004530D5 /* LocationSearchActivationView.swift in Sources */,
 				465E847B296F4ECB004530D5 /* LocationSearchResultCell.swift in Sources */,
