@@ -73,6 +73,8 @@ extension RideMapViewRepresentable {
             anno.coordinate = coordinate
             self.parent.mapView.addAnnotation(anno)
             self.parent.mapView.selectAnnotation(anno, animated: true)
+            
+            parent.mapView.showAnnotations(parent.mapView.annotations, animated: true)
         }
     }
 }
