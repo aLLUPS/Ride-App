@@ -26,7 +26,8 @@ struct RideMapViewRepresentable: UIViewRepresentable{
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         if let coordinate = locationViewModel.selectedLocationCoordinate {
-            print("DEBUG: Selected location in map view \(coordinate)")
+            context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
+            // print("DEBUG: Selected location in map view \(coordinate)")
         }
     }
     
@@ -36,13 +37,21 @@ struct RideMapViewRepresentable: UIViewRepresentable{
 }
 
 extension RideMapViewRepresentable {
+    
     class MapCoordinator: NSObject, MKMapViewDelegate{
+        
+        // MARK: - Properties
+        
         let parent: RideMapViewRepresentable
+        
+        // MARK: - Lifecycle
         
         init(parent: RideMapViewRepresentable){
             self.parent = parent
             super.init()
         }
+        
+        // MARK: - MKMapViewDelegate
         
         func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
             
@@ -53,6 +62,17 @@ extension RideMapViewRepresentable {
             )
             
             parent.mapView.setRegion(region, animated: true)
+        }
+        
+        // MARK: - Helpers
+        
+        func addAndSelectAnnotation(withCoordinate coordinate: CLLocationCoordinate2D){
+            parent.mapView.removeAnnotations(parent.mapView.annotations) // to remove previous annotation
+            
+            let anno = MKPointAnnotation()
+            anno.coordinate = coordinate
+            self.parent.mapView.addAnnotation(anno)
+            self.parent.mapView.selectAnnotation(anno, animated: true)
         }
     }
 }
