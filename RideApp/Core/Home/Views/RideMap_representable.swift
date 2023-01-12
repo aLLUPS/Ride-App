@@ -11,7 +11,7 @@ import MapKit
 struct RideMapViewRepresentable: UIViewRepresentable{
     
     let mapView = MKMapView()
-    let locationManager = LocationManager()
+    let locationManager = LocationManager.shared
     // @StateObject var locationViewModel: LocationSearchViewModel  // intializing
     @Binding var mapState: MapViewState
     @EnvironmentObject var locationViewModel: LocationSearchViewModel   // instead of initilaizing, just casting

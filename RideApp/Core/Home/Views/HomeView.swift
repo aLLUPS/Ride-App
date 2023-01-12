@@ -11,6 +11,7 @@ struct HomeView: View{
     
     // @State private var showLocationSearchView = false
     @State private var mapState = MapViewState.noInput
+    @EnvironmentObject var locationViewModel: LocationSearchViewModel
     
     var body: some View{
         ZStack(alignment: .bottom) {
@@ -41,6 +42,13 @@ struct HomeView: View{
             }
         }
         .edgesIgnoringSafeArea(.bottom)
+        .onReceive(LocationManager.shared.$userLocation) {
+            location in
+            if let location = location {
+                print("DEBUG: User location in home view is \(location)")
+                locationViewModel.userLocation = location
+            }
+        }
     }
 }
 
