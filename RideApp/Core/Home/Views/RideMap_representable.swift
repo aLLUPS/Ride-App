@@ -13,6 +13,7 @@ struct RideMapViewRepresentable: UIViewRepresentable{
     let mapView = MKMapView()
     let locationManager = LocationManager()
     // @StateObject var locationViewModel: LocationSearchViewModel  // intializing
+    @Binding var mapState: MapViewState
     @EnvironmentObject var locationViewModel: LocationSearchViewModel   // instead of initilaizing, just casting
     
     func makeUIView(context: Context) -> some UIView {
@@ -25,11 +26,26 @@ struct RideMapViewRepresentable: UIViewRepresentable{
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        if let coordinate = locationViewModel.selectedLocationCoordinate {
-            context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
-            // print("DEBUG: Selected location in map view \(coordinate)")
-            context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
+        print("DEBUG: Map state is \(mapState)")
+        
+        switch mapState{
+        case .noInput:
+            context.coordinator.clearMapViewAndRecenterOnUserLocation()
+            break
+        case .searchingForLocation:
+            break
+        case .locationSelected:
+            if let coordinate = locationViewModel.selectedLocationCoordinate {
+                context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
+                // print("DEBUG: Selected location in map view \(coordinate)")
+                context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
+            }
+            break
         }
+//
+//        if mapState == .noInput {
+//            context.coordinator.clearMapViewAndRecenterOnUserLocation()
+//        }
     }
     
     func makeCoordinator() -> MapCoordinator {
@@ -45,6 +61,7 @@ extension RideMapViewRepresentable {
         
         let parent: RideMapViewRepresentable
         var userLocationCoordinate: CLLocationCoordinate2D?
+        var currentRegion: MKCoordinateRegion?
         
         // MARK: - Lifecycle
         
@@ -62,6 +79,8 @@ extension RideMapViewRepresentable {
                                                       longitude: userLocation.coordinate.longitude),
                 span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
             )
+            
+            self.currentRegion = region
             
             parent.mapView.setRegion(region, animated: true)
         }
@@ -111,6 +130,15 @@ extension RideMapViewRepresentable {
                 
                 guard let route = response?.routes.first else { return }    // get the first route since it is the fastest
                 completion(route)
+            }
+        }
+        
+        func clearMapViewAndRecenterOnUserLocation(){
+            parent.mapView.removeAnnotations(parent.mapView.annotations)
+            parent.mapView.removeOverlays(parent.mapView.overlays)
+            
+            if let currentRegion = currentRegion{
+                parent.mapView.setRegion(currentRegion, animated: true)
             }
         }
     }

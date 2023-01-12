@@ -14,7 +14,7 @@ struct HomeView: View{
     
     var body: some View{
         ZStack(alignment: .top) {
-            RideMapViewRepresentable()
+            RideMapViewRepresentable(mapState: $mapState)
                 .ignoresSafeArea()
             
             if mapState == .searchingForLocation {
