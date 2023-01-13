@@ -41,6 +41,8 @@ struct RideMapViewRepresentable: UIViewRepresentable{
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
             }
             break
+        case .polylineAdded:
+            break
         }
 //
 //        if mapState == .noInput {
@@ -111,6 +113,7 @@ extension RideMapViewRepresentable {
             
             parent.locationViewModel.getDestinationRoute(from: userLocationCoordinate, to: coordinate){ route in
                 self.parent.mapView.addOverlay(route.polyline)
+                self.parent.mapState = .polylineAdded
                 let rect = self.parent.mapView.mapRectThatFits(route.polyline.boundingMapRect,
                                                                edgePadding: .init(top: 64, left:32, bottom: 500, right: 32))
                 self.parent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
