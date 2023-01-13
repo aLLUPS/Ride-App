@@ -23,6 +23,7 @@
 		465E84842970578D004530D5 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E84832970578D004530D5 /* RideRequestView.swift */; };
 		465E848629708370004530D5 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E848529708370004530D5 /* RideType.swift */; };
 		465E8488297092F0004530D5 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E8487297092F0004530D5 /* Double.swift */; };
+		465E848A297118A2004530D5 /* RideLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E8489297118A2004530D5 /* RideLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		465E84832970578D004530D5 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		465E848529708370004530D5 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		465E8487297092F0004530D5 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		465E8489297118A2004530D5 /* RideLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				465E848029704BA3004530D5 /* MapViewState.swift */,
 				465E848529708370004530D5 /* RideType.swift */,
+				465E8489297118A2004530D5 /* RideLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				465E846D296F02E1004530D5 /* RideMap_representable.swift in Sources */,
 				465E8488297092F0004530D5 /* Double.swift in Sources */,
 				465E848129704BA3004530D5 /* MapViewState.swift in Sources */,
+				465E848A297118A2004530D5 /* RideLocation.swift in Sources */,
 				465E847F29700227004530D5 /* README.md in Sources */,
 				465E847D296FC854004530D5 /* LocationSearchViewModel.swift in Sources */,
 				465E84842970578D004530D5 /* RideRequestView.swift in Sources */,

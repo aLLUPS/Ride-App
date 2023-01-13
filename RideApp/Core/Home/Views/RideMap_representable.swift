@@ -35,9 +35,9 @@ struct RideMapViewRepresentable: UIViewRepresentable{
         case .searchingForLocation:
             break
         case .locationSelected:
-            if let coordinate = locationViewModel.selectedLocationCoordinate {
+            if let coordinate = locationViewModel.selectedLocationCoordinate?.coordinate {
                 context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
-                // print("DEBUG: Selected location in map view \(coordinate)")
+                print("DEBUG: Selected location in map view \(coordinate)")
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
             }
             break
