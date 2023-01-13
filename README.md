@@ -12,10 +12,10 @@ This is a ride selecting and booking application which is simillar to Uber, Pick
     App Preview
   </th>
   <th>
-    Home Page - Light mode
+    Home Page - Dark mode
   </th>
   <th>
-    Home Page - Dark mode
+    Home Page - Light mode
   </th>
   <th>
     Location Selection View - Dark mode
