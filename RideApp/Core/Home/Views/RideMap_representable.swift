@@ -109,7 +109,7 @@ extension RideMapViewRepresentable {
             
             guard let userLocationCoordinate = self.userLocationCoordinate else { return }
             
-            getDestinationRoute(from: userLocationCoordinate, to: coordinate){ route in
+            parent.locationViewModel.getDestinationRoute(from: userLocationCoordinate, to: coordinate){ route in
                 self.parent.mapView.addOverlay(route.polyline)
                 let rect = self.parent.mapView.mapRectThatFits(route.polyline.boundingMapRect,
                                                                edgePadding: .init(top: 64, left:32, bottom: 500, right: 32))
@@ -117,25 +117,7 @@ extension RideMapViewRepresentable {
             }
         }
         
-        func getDestinationRoute(from userLocation: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D, completion: @escaping(MKRoute) -> Void){
-            let userPlacemark = MKPlacemark(coordinate: userLocation)
-            let destPlacemark = MKPlacemark(coordinate: destination)
-            let request = MKDirections.Request()
-            request.source = MKMapItem(placemark: userPlacemark)
-            request.destination = MKMapItem(placemark: destPlacemark)
-            let directions = MKDirections(request: request)
-            
-            directions.calculate { response, error in
-                if let error = error {
-                    print("DEBUG: Failed to get directions with error \(error.localizedDescription)")
-                    return
-                }
-                
-                guard let route = response?.routes.first else { return }    // get the first route since it is the fastest
-                completion(route)
-            }
-        }
-        
+ 
         func clearMapViewAndRecenterOnUserLocation(){
             parent.mapView.removeAnnotations(parent.mapView.annotations)
             parent.mapView.removeOverlays(parent.mapView.overlays)
